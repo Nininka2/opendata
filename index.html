@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Каталог открытых данных Казахстана">
+    <title>OpenData KZ — Открытые данные</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">OpenData <span>KZ</span></a>
+            <nav>
+                <a href="index.html" class="active">Главная</a>
+                <a href="about.html">О проекте</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <div class="hero-label">ОТКРЫТЫЕ ДАННЫЕ</div>
+            <h1>Данные, которые <span>говорят</span></h1>
+            <p>
+                Изучай статистику Казахстана, ищи показатели,
+                сравнивай значения и скачивай результаты.
+            </p>
+            <a href="#catalog" class="main-button">Открыть каталог</a>
+        </section>
+
+        <section class="stats">
+            <article class="stat-card">
+                <span>Найдено записей</span>
+                <strong id="recordCount">0</strong>
+            </article>
+            <article class="stat-card">
+                <span>Показателей</span>
+                <strong id="indicatorCount">0</strong>
+            </article>
+            <article class="stat-card">
+                <span>Время обработки</span>
+                <strong id="timeCount">0 мс</strong>
+            </article>
+        </section>
+
+        <section id="catalog" class="catalog">
+            <div class="section-heading">
+                <div>
+                    <h2>Каталог данных</h2>
+                    <p>Статистические показатели Республики Казахстан</p>
+                </div>
+                <button id="downloadBtn" class="download-button">
+                    Скачать CSV
+                </button>
+            </div>
+
+            <div class="filters">
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="Поиск по названию..."
+                    aria-label="Поиск по названию"
+                >
+
+                <select id="categorySelect" aria-label="Фильтр показателей">
+                    <option value="all">Все показатели</option>
+                </select>
+
+                <select id="sortSelect" aria-label="Сортировка">
+                    <option value="year-desc">Сначала новые годы</option>
+                    <option value="year-asc">Сначала старые годы</option>
+                    <option value="name-asc">По названию А–Я</option>
+                    <option value="value-desc">По значению: больше</option>
+                    <option value="value-asc">По значению: меньше</option>
+                </select>
+            </div>
+
+            <div id="status" class="status" role="status" aria-live="polite">
+                Загружаем данные из API...
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Показатель</th>
+                            <th>Год</th>
+                            <th>Значение</th>
+                            <th>Единица</th>
+                        </tr>
+                    </thead>
+                    <tbody id="dataTable">
+                        <tr>
+                            <td colspan="4">Загрузка данных...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p class="table-note">
+                Источник: Всемирный банк, API открытых данных.
+                Значения отображаются по доступным годам.
+            </p>
+        </section>
+
+        <section class="algorithm">
+            <h2>Алгоритмы обработки</h2>
+            <div class="algorithm-grid">
+                <article>
+                    <h3>Линейный поиск</h3>
+                    <p>Проверяет записи по очереди и находит совпадения.</p>
+                    <span>Сложность: O(n)</span>
+                </article>
+                <article>
+                    <h3>Пузырьковая сортировка</h3>
+                    <p>Сравнивает соседние элементы и меняет их местами.</p>
+                    <span>Сложность: O(n²)</span>
+                </article>
+                <article>
+                    <h3>Измерение времени</h3>
+                    <p>Измеряет длительность поиска и сортировки.</p>
+                    <span>performance.now()</span>
+                </article>
+            </div>
+        </section>
+
+        <section class="source-card">
+            <h2>Источник информации</h2>
+            <p>
+                Данные получаются через API Всемирного банка.
+                Используются статистические показатели по Казахстану.
+            </p>
+            <a href="https://data.worldbank.org/country/kazakhstan"
+               target="_blank" rel="noopener noreferrer">
+                Открыть страницу данных Казахстана →
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <span>OpenData KZ</span>
+            <span>Учебный проект · 2026</span>
+        </div>
+    </footer>
+</body>
+</html>

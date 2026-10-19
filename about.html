@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О проекте — OpenData KZ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">OpenData <span>KZ</span></a>
+            <nav>
+                <a href="index.html">Главная</a>
+                <a href="about.html" class="active">О проекте</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container about-page">
+        <div class="hero-label">ИНФОРМАТИКА · ПО-25</div>
+        <h1>О проекте OpenData KZ</h1>
+        <p>
+            OpenData KZ — учебный веб-проект для изучения,
+            поиска и обработки открытых статистических данных Казахстана.
+        </p>
+
+        <section>
+            <h2>Цель проекта</h2>
+            <p>
+                Научиться получать данные через API, обрабатывать их
+                с помощью алгоритмов, измерять время работы и сохранять
+                результаты в файл.
+            </p>
+        </section>
+
+        <section>
+            <h2>Источник данных</h2>
+            <p>
+                В проекте используется API Всемирного банка.
+                Данные относятся к Казахстану и включают численность
+                населения, ВВП, ожидаемую продолжительность жизни
+                и использование интернета.
+            </p>
+            <p>
+                <a href="https://data.worldbank.org/country/kazakhstan"
+                   target="_blank" rel="noopener noreferrer">
+                    Страница данных Казахстана
+                </a>
+            </p>
+            <p>
+                <a href="https://api.worldbank.org/v2/country/KAZ/indicator/SP.POP.TOTL?format=json&per_page=30"
+                   target="_blank" rel="noopener noreferrer">
+                    Пример прямого запроса API
+                </a>
+            </p>
+            <p>
+                Дата обращения: 19 октября 2026 года.
+                Актуальность и доступность данных зависят от API.
+            </p>
+        </section>
+
+        <section>
+            <h2>Алгоритм работы</h2>
+            <ol>
+                <li>Пользователь открывает главную страницу.</li>
+                <li>Программа отправляет запросы к API.</li>
+                <li>Ответ сервера преобразуется в список записей.</li>
+                <li>Пользователь задаёт поиск и фильтр.</li>
+                <li>Программа выполняет линейный поиск.</li>
+                <li>Найденные записи сортируются пузырьковым методом.</li>
+                <li>Время обработки показывается на странице.</li>
+                <li>Результаты можно сохранить в CSV.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Использованные технологии</h2>
+            <ul>
+                <li>HTML — структура страницы.</li>
+                <li>CSS — оформление и адаптивный дизайн.</li>
+                <li>JavaScript — запросы API и алгоритмы.</li>
+                <li>JSON — формат ответа API.</li>
+                <li>CSV — формат сохранения результатов.</li>
+                <li>Git и GitHub — контроль версий и публикация.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Безопасность и ограничения</h2>
+            <p>
+                Проект не собирает персональные данные и не требует
+                регистрации. Источник данных указан на сайте.
+                Значения могут обновляться на стороне поставщика.
+            </p>
+            <p>
+                Для корректной работы требуется подключение к интернету
+                и доступность API. Пузырьковая сортировка используется
+                для учебной демонстрации и не предназначена для
+                обработки очень больших массивов.
+            </p>
+        </section>
+
+        <a href="index.html" class="main-button">Вернуться к каталогу</a>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <span>OpenData KZ</span>
+            <span>Учебный проект · 2026</span>
+        </div>
+    </footer>
+</body>
+</html>
